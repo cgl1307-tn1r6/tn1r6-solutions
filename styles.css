@@ -1,0 +1,135 @@
+:root {
+    --gris-oscuro: #2C2C2C;
+    --gris-medio: #3F3F3F;
+    --gris-claro: #D4D4D4;
+    --naranja: #FF6A00;
+    --blanco: #FFFFFF;
+    --fuente: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente);
+    background: var(--gris-oscuro);
+    color: var(--gris-claro);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: var(--gris-medio);
+    border-bottom: 2px solid var(--naranja);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--naranja);
+}
+
+.nav a {
+    margin-left: 20px;
+    color: var(--gris-claro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.50s ease, text-shadow 0.50s ease;
+}
+
+.nav a:hover {
+    color: var(--naranja);
+    text-shadow: 0 0 6px rgba(255, 106, 0, 0.6); /* brillo suave */
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--gris-medio), var(--gris-oscuro));
+}
+
+.hero h1 {
+    color: var(--naranja);
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--gris-claro);
+}
+
+/* Secciones */
+.section {
+    padding: 60px 40px;
+}
+
+.section h2 {
+    color: var(--naranja);
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--gris-medio);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    border-left: 4px solid var(--naranja);
+}
+
+.card h3 {
+    color: var(--naranja);
+}
+
+/* Contacto */
+.contacto .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: var(--naranja);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.contacto .btn:hover {
+    background: #e56c00;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--gris-medio);
+    color: var(--gris-claro);
+    border-top: 2px solid var(--naranja);
+}
+
+.logo-hero {
+    width: 140px;          /* Ajusta aquí el tamaño */
+    display: block;
+    margin: 0 auto 25px;   /* Centrado + espacio inferior */
+    opacity: 0;            /* Para iniciar el fade-in */
+    animation: fadeIn 6.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
